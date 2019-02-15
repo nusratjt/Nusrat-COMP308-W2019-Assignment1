@@ -1,76 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title><%= title %></title>
-  <!-- CSS Section-->
-  <link rel="stylesheet" href="bootstrap/dist/css/bootstrap.min.css" />
-  <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css" />
-  <link rel="stylesheet" href="Content/app.css" />
-</head>
-
-<body>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <h4 class="text-white">Nusrat Jahan - 300967157</h4>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav ml-auto">
-        <% if(title == "Home") { %>
-        <li class="nav-item active"><% } else { %></li>
-        <li class="nav-item">
-          <% } %>
-
-          <a class="nav-link" href="/"><i class="fa fa-lg fa-home"></i> Home
-            <span class="sr-only">(current)</span></a>
-        </li>
-
-        <% if(title == "About Me") { %>
-        <li class="nav-item active"><% } else { %></li>
-        <li class="nav-item">
-          <% } %>
-
-          <a class="nav-link" href="/about"><i class="fa fa-lg fa-info"></i> About Me</a>
-        </li>
-
-        <% if(title == "Projects") { %>
-        <li class="nav-item active"><% } else { %></li>
-        <li class="nav-item">
-          <% } %>
-
-          <a class="nav-link" href="/projects"><i class="fa fa-lg fa-briefcase"></i> Projects</a>
-        </li>
-
-        <% if(title == "Services") { %>
-        <li class="nav-item active"><% } else { %></li>
-        <li class="nav-item">
-          <% } %>
-
-          <a class="nav-link" href="/services"><i class="fa fa-lg fa-birthday-cake"></i> Services</a>
-        </li>
-
-        <% if(title == "Contact") { %>
-        <li class="nav-item active"><% } else { %></li>
-        <li class="nav-item">
-          <% } %>
-
-          <a class="nav-link" href="/contact"><i class="fa fa-lg fa-phone"></i> Contact</a>
-        </li>
-      </ul>
-    </div>
-  </nav>
+<%include ./partials/header.ejs %>
 
   <div class="container">
     <div class="jumbotron">
       <h1 class="display-4">Welcome to <%= title %> </h1>
 
     </div>
+    <% if (title == "Home") { %>
+      <a class="btn btn-primary" href="/about" role="button">About Me</a>
+    <% } %>
   </div>
-  <!-- JavaScript Section -->
-  <script src="jquery/dist/jquery.min.js"></script>
-  <script src="bootstrap/dist/js/bootstrap.min.js"></script>
-  <script src="Scripts/app.js"></script>
-</body>
 
-</html>
+  
+
+  <%include ./partials/footer.ejs %>
