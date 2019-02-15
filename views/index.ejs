@@ -1,15 +1,117 @@
 <%include ./partials/header.ejs %>
 
-  <div class="container">
-    <div class="jumbotron">
-      <h1 class="display-4">Welcome to <%= title %> </h1>
+<div class="container">
 
+  <% if (title == "Home") { %>
+  <h2 class="display-4">Be peace upon you all! </h2>
+  <h3>Welcome!!</br>
+    This is the online portfolio of Nusrat Jahan,</br>
+    student of Software Engineering Technology,</br>
+    Centennial College.
+  </h3>
+
+
+  <h1>I make people tell their stories through web.</h1>
+
+  <a class="btn btn-primary" href="/about" role="button">Know more About Me</a>
+  <% } %>
+
+  <% if (title == "About Me") { %>
+  <p>Nusrat Jahan</p>
+  <p>I am a student of Software Engineering Technology in Centennial College.</br>
+    Currently, I am completing my co-op work term at Children, Youth and Social Services I+IT Cluster (CYSSC)</p>
+
+  <a class="btn btn-primary" href="#" role="button">Have a look in my resume</a>
+  <a class="btn btn-primary" href="/projects" role="button">Check my project works</a>
+
+  <% } %>
+
+  <% if (title == "Projects") { %>
+  <p class="display-4">My Project works in Centennial College</p>
+  <ul>
+    <li>
+      Web Development 1</br>
+      with HTml 5 and CSS 3
+    </li>
+    </hr>
+    <li>
+      Web Development 2</br>
+      with ASP.Net Core MVC
+    </li>
+    </hr>
+    <li>
+      Java
+    </li>
+    </hr>
+
+  </ul>
+
+  <% } %>
+
+  <% if (title == "Services") { %>
+  <h4 class="text-primary">As a Software Engineer, I give services related to programming and web development.</h4>
+  <ul>
+    <li>
+      HTml
+    </li>
+    <li>
+      CSS
+    </li>
+    <li>
+      JavaScripts
+    </li>
+    <li>
+      Java
+    </li>
+    <li>
+      Linux
+    </li>
+  </ul>
+
+  <p>Tell your stories and I will enlighten it through your websites. So,</p>
+  <a class="btn btn-primary" href="/contact" role="button">Contact me</a>
+
+  <% } %>
+
+  <% if (title == "Contact") { %>
+  <p class="text-primary">Leave your name and address below: </p>
+
+  <form class="form" method="POST">
+    <div class="form-group">
+      <label for="FirstNameTextField">First Name</label>
+      <input type="text" placeholder="Enter First Name" class="form-control" id="FirstNameTextField"
+        name="FirstNameTextField" required>
     </div>
-    <% if (title == "Home") { %>
-      <a class="btn btn-primary" href="/about" role="button">About Me</a>
-    <% } %>
-  </div>
+    <div class="form-group">
+      <label for="LastNameTextField">Last Name</label>
+      <input type="text" placeholder="Enter Last Name" class="form-control" id="LastNameTextField"
+        name="LastNameTextField" required>
+    </div>
+    <div class="form-group">
+      <label for="ContactNumTextField">Contact number</label>
+      <input type="text" placeholder="Enter phone number" class="form-control" id="ContactNumTextField"
+        name="ContactNumTextField" required>
+    </div>
 
-  
+    <div class="form-group">
+      <label for="EmailTextField">Email address</label>
+      <input type="text" placeholder="Enter email address" class="form-control" id="EmailTextField"
+        name="EmailTextField" required>
+    </div>
+    <div class="form-group">
+      <label for="MessageTextField">Message</label>
+      <input type="text" placeholder="Leave me your message" class="form-control" id="MessageTextField"
+        name="MessageTextField" required>
+    </div>
 
-  <%include ./partials/footer.ejs %>
+    <button type="submit" class="btn btn-primary">
+      <i class="fa fa-check-square-o"></i> Submit</button>
+  </form>
+
+
+  <% } %>
+
+
+</div>
+
+<%include ./partials/footer.ejs %>
