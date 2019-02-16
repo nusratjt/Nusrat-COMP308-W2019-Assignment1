@@ -1,1 +1,32 @@
 /* Custom css goes here*/
+
+/* Home page */
+#homePage {
+    background: url('../Assets/images/background01.jpg') no-repeat center center fixed;
+    background-size:cover;
+    margin-top: 150px;
+
+}
+ 
+/* header*/
+#logoDiv{
+    background-color: red;
+}
+
+/* footer*/
+#footer{
+    background-color: black;
+    color: #fff;
+    margin-top: 0px; 
+    height: 50px;
+}
+
+/* About Page*/
+
+#aboutPage{
+    margin-top: 150px;
+    background-color: lightgray;
+}
+
+
+
