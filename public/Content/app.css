@@ -106,3 +106,13 @@
     margin-right: auto;
     width: 75%;
  }
+
+ /* Contact information page */
+
+ #contactInfoPage{
+    margin-top: 150px;
+    padding: 10px;
+    background-color: lightgray;
+    margin-left: auto;
+    margin-right: auto;
+ }

@@ -1,3 +1,10 @@
+/**
+  * file name: index.js  // indexRouter
+  * Student name: Nusrat Jahan
+  * Student Id: 300967157
+  * Date: Feb 16, 2019
+  */
+
 let express = require('express');
 let router = express.Router();
 //let contactInfo = require('../models/contact');
@@ -27,9 +34,12 @@ router.get('/contact', function(req, res, next) {
   res.render('contacts/index', { title: 'Contact' });
 });
 
+
+/* get contact information using POST method. */
 router.post('/contact', function(req, res, next) {
   //console.log(req.body);
 
+  /** Holds values that user input */
   let contactInfo = {
     "firstName" : req.body.firstName,
     "lastName": req.body.lastName,
